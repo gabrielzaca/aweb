@@ -15,7 +15,10 @@ header {
 }
 
 header img {
-    max-width: 10vw;
+    max-width: 150px;
+}
+.imagem1{
+    width: 50%;
 }
 
 nav ul {
