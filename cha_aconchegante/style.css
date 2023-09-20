@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: rgba(165, 42, 42, 0.582);
+    background-color: rgba(224, 9, 52, 0.582);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ nav a {
 }
 
 .menu-item {
-    background-color: white;
+    background-color: rgba(245, 141, 162, 0.582);
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
@@ -94,8 +94,21 @@ nav a {
 }
 
 footer {
-    background-color: rgba(165, 42, 42, 0.582);
+    background-color: rgba(224, 9, 52, 0.582);
     color: white;
     text-align: center;
     padding: 30px;
+}
+
+@font-face {
+    font-family: tu ;
+    src: url(BetterTogether-owP2B.otf);
+}
+
+.cabecario{
+    font-family: 'tu', Times, serif;
+}
+
+h3{
+    font-family: 'tu', Times, serif;
 }
