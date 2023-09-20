@@ -1,24 +1,21 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #262626;
+    background-color: rgba(165, 42, 42, 0.582);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     color: white;
 }
 
 header img {
     max-width: 150px;
-}
-.imagem1{
-    width: 50%;
 }
 
 nav ul {
@@ -40,7 +37,8 @@ nav a {
     padding: 40px 0;
 }
 
-#home h1 {
+#home h1, h2 {
+    text-align: center;
     font-size: 2em;
 }
 
@@ -96,8 +94,8 @@ nav a {
 }
 
 footer {
-    background-color: #262626;
+    background-color: rgba(165, 42, 42, 0.582);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 30px;
 }
