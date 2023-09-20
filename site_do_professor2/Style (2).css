@@ -122,3 +122,8 @@ footer {
         margin: 10px;
     }
 }
+.professor{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
