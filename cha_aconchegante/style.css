@@ -8,17 +8,22 @@ body {
 header {
     background-color: rgba(224, 9, 52, 0.582);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 25px;
     color: white;
+    position: fixed;
+    width: 100%;
 }
-
+.home{
+    top: 30px;
+}
 header img {
     max-width: 150px;
 }
 
 nav ul {
+    text-align: center;
     list-style: none;
 }
 
@@ -30,6 +35,7 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: white;
+    
 }
 
 #home {
@@ -56,7 +62,7 @@ nav a {
 }
 
 .menu-item img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -111,4 +117,17 @@ footer {
 
 h3{
     font-family: 'tu', Times, serif;
+}
+@font-face {
+    font-family: bs;
+    src: url(Blenda\ Script.otf);
+}
+h1{
+    font-family: 'bs', Times, serif;
+}
+h2{
+    font-family: 'bs', Times, serif;
+}
+.end{
+    font-family: 'b', Times, serif;
 }
