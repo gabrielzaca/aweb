@@ -1,24 +1,33 @@
+/* Paleta de Cores */
+:root {
+    --cor-primaria: #F4EAF7; /* Lavanda clara (60%) */
+    --cor-secundaria: #EEC9E6; /* Rosa pastel (30%) */
+    --cor-destaque: #D8A7CA; /* Lilás intenso (10%) */
+    --texto: #5B3E5D; /* Roxo suave para textos */
+}
+
 body {
     font-family: Helvetica, sans-serif;
-    color: seashell;
-    background-color: rgb(215, 81, 217);
+    color: var(--texto);
+    background-color: var(--cor-primaria);
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid seashell;
-    background-color: rgb(249, 172, 226);
+    background-color: var(--cor-secundaria);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 69px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -34,11 +43,18 @@ nav ul {
 }
 
 nav a {
-    color: seashell;
-    text-decoration: underline;
-    font-size: 22px;
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Seção Missão */
 .banner {
     background: url('img-mission-background.webp') center/cover no-repeat;
     height: 700px;
@@ -46,39 +62,49 @@ nav a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 .overlay {
-    background-color: rgb(215, 81, 217);
+    background-color: rgba(232, 194, 217, 0.8);
     padding: 20px;
+    border-radius: 10px;
 }
 
 h2 {
     font-size: 32px;
     text-transform: uppercase;
+    color: var(--texto);
 }
 
-h4 {
-    font-size: 22px;
+h3 {
+    color: var(--texto);
 }
 
+/* Galeria de Produtos */
 .product-gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 50px;
 }
 
 .product img {
-    width: 300px;
+    width: 280px;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
+.product img:hover {
+    transform: scale(1.05);
+}
+
+/* Seção Localizações */
 .locations-container {
     display: flex;
     justify-content: center;
@@ -92,21 +118,14 @@ h4 {
 .location {
     background-color: rgba(236, 105, 208, 0.8);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 300px;
     opacity: 1;
 }
 
+/* Rodapé */
 footer {
     padding: 20px;
-    background-color: rgb(238, 187, 247);
-}
-
-footer h5 {
-    font-size: 15px;
-}
-
-footer p {
-    text-align: left;
-    font-size: 12px;
+    background-color: var(--cor-secundaria);
+    font-size: 14px;
 }
