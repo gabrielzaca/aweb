@@ -1,9 +1,9 @@
-/* Paleta de Cores */
+
 :root {
-    --cor-primaria: #F4EAF7; /* Lavanda clara (60%) */
-    --cor-secundaria: #EEC9E6; /* Rosa pastel (30%) */
-    --cor-destaque: #D8A7CA; /* Lilás intenso (10%) */
-    --texto: #5B3E5D; /* Roxo suave para textos */
+    --cor-primaria: #F4EAF7; 
+    --cor-secundaria: #EEC9E6;
+    --cor-destaque: #D8A7CA; 
+    --texto: #5B3E5D; 
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@ nav a:hover {
     color: var(--cor-destaque);
 }
 
-/* Seção Missão */
+
 .banner {
     background: url('img-mission-background.webp') center/cover no-repeat;
     height: 700px;
@@ -83,7 +83,7 @@ h3 {
     color: var(--texto);
 }
 
-/* Galeria de Produtos */
+
 .product-gallery {
     display: flex;
     justify-content: center;
@@ -104,7 +104,7 @@ h3 {
     transform: scale(1.05);
 }
 
-/* Seção Localizações */
+
 .locations-container {
     display: flex;
     justify-content: center;
@@ -123,7 +123,7 @@ h3 {
     opacity: 1;
 }
 
-/* Rodapé */
+
 footer {
     padding: 20px;
     background-color: var(--cor-secundaria);
