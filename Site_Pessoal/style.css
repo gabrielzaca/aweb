@@ -38,7 +38,7 @@ body {
 }
 
 .nav-links {
-  display: block; /* Opcional, já que float força isso */
+  display: block;
   float: right;
 }
 
@@ -54,7 +54,6 @@ body {
   color: var(--cor-destaque);
 }
 
-/* Hero Section */
 .hero {
   padding: 120px 5% 80px;
   margin-top: 10px;
@@ -73,8 +72,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center; /* Alinha a imagem e o texto verticalmente */
-  gap: 40px; /* Espaço entre a imagem e o texto */
+  align-items: center;
+  gap: 40px; 
 }
 
 .hero-image {
@@ -89,8 +88,8 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza o conteúdo verticalmente */
-  height: 100%; /* Faz o texto ter a mesma altura da imagem */
+  justify-content: center; 
+  height: 100%; 
 }
 
 .hero-text h1 {
@@ -98,7 +97,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--cor-destaque);
   margin-bottom: 20px;
-  text-align: center; /* Centraliza o nome */
+  text-align: center; 
 }
 
 .hero-text p {
@@ -107,7 +106,7 @@ body {
   color: var(--cor-texto);
 }
 
-/* Restante do CSS (curiosidades, histórico, causo, habilidades, footer) */
+
 
 .curiosidades {
   padding: 40px 5%;
@@ -175,11 +174,10 @@ th, td {
   margin: 10px 0;
 }
 
-/* Footer com efeito de onda */
 .wave-footer {
   background-color: var(--cor-primaria);
   position: relative;
-  margin-top: -1px; /* Para cobrir qualquer espaço em branco */
+  margin-top: -1px; 
 }
 
 .wave-footer svg {
