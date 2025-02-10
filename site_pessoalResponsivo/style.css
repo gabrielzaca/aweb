@@ -50,8 +50,8 @@
   }
   
   .nav-links {
-    display: block;
-    float: right;
+    display: flex;
+    justify-content: space-evenly;
   }
   
   .nav-links a {
