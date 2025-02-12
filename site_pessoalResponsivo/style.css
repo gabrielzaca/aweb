@@ -15,9 +15,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--cor-texto);
   background-color: var(--cor-primaria);
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  padding-top: 80px;
 }
-
 
 .header {
   background-color: var(--cor-secundaria);
@@ -36,28 +36,87 @@ body {
   font-size: 1.8rem;
   font-family: 'Poppins', sans-serif;
   color: var(--cor-destaque);
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .nav-links a {
   font-size: 1.1rem;
-  margin-left: 2rem;
   color: var(--cor-texto);
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a i {
+  margin-right: 0.5rem;
 }
 
 .nav-links a:hover {
   color: var(--cor-destaque);
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 5%;
+  }
+
+  .nome-abreviado p {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .header {
+    padding: 0.5rem 3%;
+    height: 60px;
+  }
+
+  .nome-abreviado p span {
+    display: none;
+  }
+
+  .nome-abreviado p::after {
+    content: "G.Z";
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0;
+    margin-left: 0;
+  }
+
+  .nav-links a i {
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+}
 
 .hero {
   padding: 120px 5% 80px;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
 }
 
 .hero-content {
@@ -93,7 +152,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-
 .curiosidades {
   padding: 40px 5%;
 }
@@ -102,7 +160,7 @@ body {
   margin: 20px auto;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -111,7 +169,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
-  aspect-ratio: 1 / 1; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,7 +176,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 70%; 
+  height: 200px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -135,23 +192,27 @@ body {
   font-size: 0.95em;
 }
 
-
 .causo {
   padding: 40px 5%;
 }
 
 .causo h2 {
-  font-size: 2rem; 
+  font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   color: var(--cor-destaque);
   margin-bottom: 20px;
 }
 
+.historico {
+  margin: 100px 0;
+  padding: 0 5%;
+}
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  overflow-x: auto;
 }
 
 th, td {
@@ -159,7 +220,6 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-
 
 .wave-footer {
   background-color: var(--cor-primaria);
@@ -179,19 +239,7 @@ th, td {
   text-align: center;
 }
 
-
 @media (max-width: 768px) {
-  
-  .nome-abreviado p {
-    font-size: 1.5rem; 
-  }
-
-  .nav-links a {
-    margin-left: 1rem;
-    font-size: 1rem;
-  }
-
-  
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -202,62 +250,29 @@ th, td {
   }
 
   .hero-image {
-    width: 50%; 
+    width: 80%;
     margin-top: 20px;
   }
 
-  
   .card-container {
-    grid-template-columns: repeat(2, 1fr); 
-  }
-
-  .card {
-    aspect-ratio: 1 / 1; 
-  }
-
-  
-  .causo h2 {
-    font-size: 1.5rem; 
-  }
-
-  
-  table {
-    font-size: 0.9rem;
-  }
-
-  th, td {
-    padding: 8px; 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
-  
-  .nome-abreviado p {
-    font-size: 1.2rem; 
-    content: "G.Z"; 
+@media (max-width: 390px) {
+  .card-container {
+    grid-template-columns: 1fr;
   }
 
-  .nav-links a {
-    margin-left: 0.5rem;
+  .causo h2 {
+    font-size: 1.5rem;
+  }
+
+  table {
     font-size: 0.9rem;
   }
 
-  
-  .card-container {
-    grid-template-columns: 1fr; 
-  }
-
-  
-  .causo h2 {
-    font-size: 1.2rem; 
-  }
-
- 
-  table {
-    font-size: 0.8rem; 
-  }
-
   th, td {
-    padding: 6px; 
+    padding: 8px;
   }
 }
